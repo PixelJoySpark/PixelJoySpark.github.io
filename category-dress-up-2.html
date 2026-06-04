@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dress-up Games - Page 2 | Play Free Online | PixelJoySpark</title>
+  <meta name="description" content="Play the best free Dress-up games online on PixelJoySpark. Page 2 of our curated collection.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0b0f19;
+      --bg-card: rgba(22, 28, 45, 0.7);
+      --accent: #6c5ce7;
+      --accent-glow: rgba(108, 92, 231, 0.4);
+      --text-white: #ffffff;
+      --text-gray: #a0aec0;
+      --neon-green: #00f2fe;
+      --neon-pink: #ff007f;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: radial-gradient(circle at top, #1a1b36 0%, var(--bg-dark) 70%);
+      color: var(--text-white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Top Navbar Styles */
+    .top-navbar {
+      background: rgba(11, 15, 25, 0.85);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: 70px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      transition: background 0.3s;
+    }
+
+    .top-nav-container {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-nav-logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--text-white);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #ffffff 30%, var(--text-gray) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .top-nav-logo span {
+      -webkit-text-fill-color: initial;
+    }
+
+    .top-nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .top-nav-item {
+      color: var(--text-gray);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .top-nav-item:hover, .top-nav-item.active {
+      color: var(--text-white);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Dropdown Styles */
+    .top-nav-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .top-nav-dropdown-btn {
+      background: none;
+      border: none;
+      color: var(--text-gray);
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .top-nav-dropdown-btn:hover, .top-nav-dropdown.active .top-nav-dropdown-btn {
+      color: var(--text-white);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .top-nav-dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background: #111519;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      min-width: 180px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      border-radius: 8px;
+      z-index: 1010;
+      padding: 8px 0;
+      margin-top: 5px;
+    }
+
+    .top-nav-dropdown-content a {
+      color: var(--text-gray);
+      padding: 10px 20px;
+      text-decoration: none;
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      text-align: left;
+    }
+
+    .top-nav-dropdown-content a:hover, .top-nav-dropdown-content a.active {
+      color: var(--text-white);
+      background: var(--accent);
+    }
+
+    .top-nav-dropdown:hover .top-nav-dropdown-content {
+      display: block;
+    }
+
+    /* Toggle button for Mobile */
+    .top-nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 18px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 1020;
+    }
+
+    .top-nav-toggle .toggle-bar {
+      width: 100%;
+      height: 2px;
+      background-color: var(--text-white);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    header {
+      padding: 15px 20px 8px;
+      text-align: center;
+      position: relative;
+    }
+
+    header::after {
+      display: none;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #ffffff 30%, var(--text-gray) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: var(--text-gray);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Categories Navigation inside Footer */
+    .categories-nav {
+      padding: 15px 0;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .categories-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .category-link {
+      color: var(--text-gray);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .category-link:hover, .category-link.active {
+      color: var(--text-white);
+      background: var(--accent);
+      border-color: var(--accent);
+      box-shadow: 0 4px 12px rgba(108, 92, 231, 0.3);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 20px 80px;
+      flex-grow: 1;
+      width: 100%;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 16px;
+      box-shadow: 0 0 40px var(--accent-glow);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: -1;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .thumbnail-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      overflow: hidden;
+      background: #000;
+    }
+
+    .thumbnail-wrapper img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .card:hover .thumbnail-wrapper img {
+      transform: scale(1.08);
+    }
+
+    .card-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text-white);
+    }
+
+    .card-description {
+      font-size: 0.95rem;
+      color: var(--text-gray);
+      margin-bottom: 20px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      flex-grow: 1;
+    }
+
+    .tag-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .tag {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-gray);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      border: 1px solid rgba(255, 255, 255, 0.02);
+    }
+
+    .play-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: var(--accent);
+      color: var(--text-white);
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(108, 92, 231, 0.2);
+    }
+
+    .play-btn:hover {
+      background: #7d6ef9;
+      box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+    }
+
+    .play-btn:active {
+      transform: scale(0.98);
+    }
+
+    /* Pagination */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: 40px;
+      padding: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    .page-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 40px;
+      height: 40px;
+      padding: 0 14px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-gray);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .page-link:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-white);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .page-link.active {
+      background: var(--accent);
+      color: var(--text-white);
+      border-color: var(--accent);
+      box-shadow: 0 4px 12px rgba(108, 92, 231, 0.3);
+    }
+
+    .page-link.disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    .page-arrow {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: var(--text-gray);
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .top-nav-toggle {
+        display: flex;
+      }
+
+      .top-nav-menu {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 250px;
+        height: calc(100vh - 70px);
+        background: #0b0f19;
+        border-left: 1px solid rgba(255, 255, 255, 0.05);
+        flex-direction: column;
+        align-items: stretch;
+        padding: 30px 20px;
+        gap: 10px;
+        transition: right 0.3s ease;
+        z-index: 999;
+      }
+
+      .top-nav-menu.open {
+        right: 0;
+      }
+
+      .top-nav-item, .top-nav-dropdown-btn {
+        width: 100%;
+        text-align: left;
+        padding: 12px 15px;
+      }
+
+      .top-nav-dropdown-content {
+        position: static;
+        display: block;
+        background: rgba(255, 255, 255, 0.02);
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        margin-top: 0;
+        padding-left: 15px;
+      }
+
+      .top-nav-toggle.active .toggle-bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      .top-nav-toggle.active .toggle-bar:nth-child(2) {
+        opacity: 0;
+      }
+      .top-nav-toggle.active .toggle-bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+
+      h1 {
+        font-size: 1.2rem;
+      }
+      .subtitle {
+        font-size: 0.8rem;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <nav class="top-navbar">
+    <div class="top-nav-container">
+      <a href="index.html" class="top-nav-logo">
+        <span>🎮</span> PixelJoySpark
+      </a>
+
+      <button class="top-nav-toggle" id="topNavToggle" aria-label="Toggle menu">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+      </button>
+      <div class="top-nav-menu" id="topNavMenu">
+        <a href="index.html" class="top-nav-item ">Home</a>
+        <a href="category-casual.html" class="top-nav-item ">Casual</a>
+        <a href="category-puzzle.html" class="top-nav-item ">Puzzle</a>
+        <a href="category-adventure.html" class="top-nav-item ">Adventure</a>
+        <a href="category-simulation.html" class="top-nav-item ">Simulation</a>
+        <a href="category-shooter.html" class="top-nav-item ">Shooter</a>
+        <a href="category-dress-up.html" class="top-nav-item active">Dress-up</a>
+        <div class="top-nav-dropdown ">
+          <button class="top-nav-dropdown-btn">More ▾</button>
+          <div class="top-nav-dropdown-content">
+            <a href="category-agility.html" class="">Agility</a>
+            <a href="category-racing-driving.html" class="">Racing & Driving</a>
+            <a href="category-strategy.html" class="">Strategy</a>
+            <a href="category-battle.html" class="">Battle</a>
+            <a href="category-match-3.html" class="">Match-3</a>
+            <a href="category-basketball.html" class="">Basketball</a>
+            <a href="category-merge.html" class="">Merge</a>
+            <a href="category-bike.html" class="">Bike</a>
+            <a href="category-car.html" class="">Car</a>
+            <a href="category-controller.html" class="">Controller</a>
+            <a href="category-escape.html" class="">Escape</a>
+            <a href="category-flash.html" class="">Flash</a>
+            <a href="category-fps.html" class="">FPS</a>
+            <a href="category-horror.html" class="">Horror</a>
+            <a href="category-mahjong.html" class="">Mahjong</a>
+            <a href="category-minecraft.html" class="">Minecraft</a>
+            <a href="category-pool.html" class="">Pool</a>
+            <a href="category-soccer.html" class="">Soccer</a>
+            <a href="category-stickman.html" class="">Stickman</a>
+            <a href="category-thinky.html" class="">Thinky</a>
+            <a href="category-tower-defense.html" class="">Tower Defense</a>
+            <a href="category-mahjong-connect.html" class="">Mahjong & Connect</a>
+            <a href="category-io.html" class="">.IO</a>
+            <a href="category-mobile2-095.html" class="">Mobile2,095</a>
+            <a href="category-cards.html" class="">Cards</a>
+            <a href="category-sports.html" class="">Sports</a>
+            <a href="category-bubble-shooter.html" class="">Bubble Shooter</a>
+            <a href="category-mouse1-697.html" class="">Mouse1,697</a>
+            <a href="category-educational.html" class="">Educational</a>
+            <a href="category-3d1-383.html" class="">3D1,383</a>
+            <a href="category-casual969.html" class="">Casual969</a>
+            <a href="category-art.html" class="">Art</a>
+            <a href="category-boardgames.html" class="">Boardgames</a>
+            <a href="category-can-t-stop-playing212.html" class="">Can’t Stop Playing212</a>
+            <a href="category-car373.html" class="">Car373</a>
+            <a href="category-football.html" class="">Football</a>
+            <a href="category-cooking.html" class="">Cooking</a>
+            <a href="category-premium-perks71.html" class="">Premium Perks71</a>
+            <a href="category-mission206.html" class="">Mission206</a>
+            <a href="category-logic536.html" class="">Logic536</a>
+            <a href="category-battle523.html" class="">Battle523</a>
+            <a href="category-match-3117.html" class="">Match 3117</a>
+            <a href="category-racing126.html" class="">Racing126</a>
+            <a href="category-stunt126.html" class="">Stunt126</a>
+            <a href="category-building182.html" class="">Building182</a>
+            <a href="category-2d1-060.html" class="">2D1,060</a>
+            <a href="category-jigsaw.html" class="">Jigsaw</a>
+            <a href="category-care.html" class="">Care</a>
+            <a href="category-brain260.html" class="">Brain260</a>
+            <a href="category-management.html" class="">Management</a>
+            <a href="category-farming87.html" class="">Farming87</a>
+            <a href="category-merge221.html" class="">Merge221</a>
+            <a href="category-speed155.html" class="">Speed155</a>
+            <a href="category-collect566.html" class="">Collect566</a>
+            <a href="category-parkour55.html" class="">Parkour55</a>
+            <a href="category-avoid297.html" class="">Avoid297</a>
+            <a href="category-survival365.html" class="">Survival365</a>
+            <a href="category-skill254.html" class="">Skill254</a>
+            <a href="category-drifting113.html" class="">Drifting113</a>
+            <a href="category-quiz.html" class="">Quiz</a>
+            <a href="category-battleship.html" class="">battleship</a>
+            <a href="category-physics367.html" class="">Physics367</a>
+            <a href="category-timeless-classics24.html" class="">Timeless classics24</a>
+            <a href="category-color195.html" class="">Color195</a>
+            <a href="category-farming.html" class="">Farming</a>
+            <a href="category-bike63.html" class="">Bike63</a>
+            <a href="category-racing.html" class="">Racing</a>
+            <a href="category-mahjong37.html" class="">Mahjong37</a>
+            <a href="category-flash153.html" class="">Flash153</a>
+            <a href="category-mahjong-games.html" class="">Mahjong games</a>
+            <a href="category-minecraft81.html" class="">Minecraft81</a>
+            <a href="category-jumping150.html" class="">Jumping150</a>
+            <a href="category-block94.html" class="">Block94</a>
+            <a href="category-train-your-brain24.html" class="">Train your brain24</a>
+            <a href="category-mmo24.html" class="">MMO24</a>
+            <a href="category-management209.html" class="">Management209</a>
+            <a href="category-merge-games.html" class="">Merge games</a>
+            <a href="category-war.html" class="">War</a>
+            <a href="category-avoid.html" class="">Avoid</a>
+            <a href="category-side-scrolling184.html" class="">Side Scrolling184</a>
+            <a href="category-obstacle297.html" class="">Obstacle297</a>
+            <a href="category-cannon22.html" class="">Cannon22</a>
+            <a href="category-battleship19.html" class="">Battleship19</a>
+            <a href="category-sword35.html" class="">Sword35</a>
+            <a href="category-color.html" class="">Color</a>
+            <a href="category-3-player26.html" class="">3 Player26</a>
+            <a href="category-merge-titles.html" class="">merge titles</a>
+            <a href="category-bike-games.html" class="">bike games</a>
+            <a href="category-5-minute-fun24.html" class="">5-minute fun24</a>
+            <a href="category-car-games.html" class="">car games</a>
+            <a href="category-classic98.html" class="">Classic98</a>
+            <a href="category-parking35.html" class="">Parking35</a>
+            <a href="category-pixel313.html" class="">Pixel313</a>
+            <a href="category-logic.html" class="">Logic</a>
+            <a href="category-business135.html" class="">Business135</a>
+            <a href="category-animal215.html" class="">Animal215</a>
+            <a href="category-management-game.html" class="">management game</a>
+            <a href="category-meme-bloxy24.html" class="">Meme & bloxy24</a>
+            <a href="category-sandbox41.html" class="">Sandbox41</a>
+            <a href="category-third-person-shooter80.html" class="">Third Person Shooter80</a>
+            <a href="category-army.html" class="">Army</a>
+            <a href="category-army40.html" class="">Army40</a>
+            <a href="category-turn-based30.html" class="">Turn Based30</a>
+            <a href="category-collect.html" class="">Collect</a>
+            <a href="category-relaxing221.html" class="">Relaxing221</a>
+            <a href="category-incremental386.html" class="">Incremental386</a>
+            <a href="category-one-button84.html" class="">One Button84</a>
+            <a href="category-space57.html" class="">Space57</a>
+            <a href="category-difficult81.html" class="">Difficult81</a>
+            <a href="category-be-the-best24.html" class="">Be the best24</a>
+            <a href="category-sniper39.html" class="">Sniper39</a>
+            <a href="category-arena254.html" class="">Arena254</a>
+            <a href="category-controller59.html" class="">Controller59</a>
+            <a href="category-cartoon75.html" class="">Cartoon75</a>
+            <a href="category-gun241.html" class="">Gun241</a>
+            <a href="category-party23.html" class="">Party23</a>
+            <a href="category-fps175.html" class="">FPS175</a>
+            <a href="category-fps-game.html" class="">FPS game</a>
+            <a href="category-connect.html" class="">Connect</a>
+            <a href="category-connect68.html" class="">Connect68</a>
+            <a href="category-racing-games.html" class="">racing games</a>
+            <a href="category-war137.html" class="">War137</a>
+            <a href="category-destroy254.html" class="">Destroy254</a>
+            <a href="category-police57.html" class="">Police57</a>
+            <a href="category-solitaire27.html" class="">Solitaire27</a>
+            <a href="category-mahjong-puzzle-board.html" class="">mahjong puzzle board</a>
+            <a href="category-lol41.html" class="">Lol41</a>
+            <a href="category-obstacle298.html" class="">Obstacle298</a>
+            <a href="category-multiplayer-games.html" class="">multiplayer games</a>
+            <a href="category-obby.html" class="">Obby</a>
+            <a href="category-meme58.html" class="">Meme58</a>
+            <a href="category-obby57.html" class="">Obby57</a>
+            <a href="category-platform258.html" class="">Platform258</a>
+            <a href="category-shop49.html" class="">Shop49</a>
+            <a href="category-deep-immersive24.html" class="">Deep & immersive24</a>
+            <a href="category-mission.html" class="">Mission</a>
+            <a href="category-mmo.html" class="">MMO</a>
+            <a href="category-medieval15.html" class="">Medieval15</a>
+            <a href="category-story45.html" class="">Story45</a>
+            <a href="category-tower-defense118.html" class="">Tower Defense118</a>
+            <a href="category-hero71.html" class="">Hero71</a>
+            <a href="category-rpg80.html" class="">RPG80</a>
+            <a href="category-hidden-object.html" class="">Hidden Object</a>
+            <a href="category-detective24.html" class="">Detective24</a>
+            <a href="category-point-and-click123.html" class="">Point and Click123</a>
+            <a href="category-mystery45.html" class="">Mystery45</a>
+            <a href="category-hidden-object28.html" class="">Hidden Object28</a>
+            <a href="category-classic.html" class="">Classic</a>
+          </div>
+        </div>
+        <div class="top-nav-dropdown ">
+          <button class="top-nav-dropdown-btn">About ▾</button>
+          <div class="top-nav-dropdown-content">
+            <a href="contact.html" class="">Contact Us</a>
+            <a href="privacy.html" class="">Privacy Policy</a>
+            <a href="terms.html" class="">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Dress-up Games</h1>
+    <p class="subtitle">Play the best free Dress-up games online on PixelJoySpark. Page 2 of our curated collection.</p>
+  </header>
+
+    <!-- Dedicated Search Bar Row -->
+  <div class="search-bar-row">
+    <div class="search-bar-row-container">
+      <input type="text" id="searchInput" placeholder="Search for your favorite games..." autocomplete="off">
+      <div id="searchSuggestions" class="search-suggestions"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="grid">
+            <!-- Card: Magic Beauty Makeup -->
+      <article class="card">
+        <div class="thumbnail-wrapper">
+          <img src="images/507.webp" alt="Magic Beauty Makeup Cover" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Magic Beauty Makeup</h2>
+          <p class="card-description">Welcome to Magic Beauty Makeup, a casual and relaxing girl makeover game on H5games4u. The girl is in trouble with her appearance. Help her return to her original beauty with skin care and makeup methods. You will act as a makeover artist who does skin care, applies facial makeup, and designs a perfect look in the virtual fashion salon. And the best part? All the makeup procedures are done just by clicking and dragging.</p>
+          <div class="tag-container">
+            <span class="tag">Dress-up</span>
+          </div>
+          <a href="magic-beauty-makeup.html" class="play-btn">Play Now &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card: Vampiric Roulette Romance -->
+      <article class="card">
+        <div class="thumbnail-wrapper">
+          <img src="images/512.webp" alt="Vampiric Roulette Romance Cover" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Vampiric Roulette Romance</h2>
+          <p class="card-description">Experience Gothic romance in "Vampiric Roulette Romance"! Help the Vampire Prince choose a date for the eclipse night party from four stunning beauties. Dive into Gothic dress-up and makeup levels, and witness the suspenseful roulette revelation under the moonlit eclipse.</p>
+          <div class="tag-container">
+            <span class="tag">Dress-up</span>
+          </div>
+          <a href="vampiric-roulette-romance.html" class="play-btn">Play Now &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card: Toco Teens Halloween Party -->
+      <article class="card">
+        <div class="thumbnail-wrapper">
+          <img src="images/528.webp" alt="Toco Teens Halloween Party Cover" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Toco Teens Halloween Party</h2>
+          <p class="card-description">Step into the spooky fun world of Toca Teens Halloween Party, a fashionable Halloween dress-up game made just for style lovers! ?
+Join the Toca teens as they get ready for the most glamorous Halloween event of the year. Choose from eerie yet elegant outfits, haunting accessories, and bold makeup looks to create the perfect spooky-chic style.</p>
+          <div class="tag-container">
+            <span class="tag">Dress-up</span>
+          </div>
+          <a href="toco-teens-halloween-party.html" class="play-btn">Play Now &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card: Anime Dress Up - Doll Dress Up -->
+      <article class="card">
+        <div class="thumbnail-wrapper">
+          <img src="images/529.webp" alt="Anime Dress Up - Doll Dress Up Cover" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Anime Dress Up - Doll Dress Up</h2>
+          <p class="card-description">Anime Dress Up - Doll Dress Up is a fashionable and wonderful dress-up game with shocking graphic effects that will provide females with an unforgettable dress-up experience! This game is ideal for everyone who enjoys fashion and adventure, thanks to its amazing graphics and simple UI.</p>
+          <div class="tag-container">
+            <span class="tag">Dress-up</span>
+          </div>
+          <a href="anime-dress-up-doll-dress-up.html" class="play-btn">Play Now &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card: Furry Wedding Proposal -->
+      <article class="card">
+        <div class="thumbnail-wrapper">
+          <img src="images/551.webp" alt="Furry Wedding Proposal Cover" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Furry Wedding Proposal</h2>
+          <p class="card-description">Hi, young stylist! You will find a very unusual couple in love - a brutal fox and a feminine bunny - who are preparing for their future wedding. They dream of looking stunning on this holiday and you will become their main assistant in this exciting adventure! You have to dress the characters in beautiful wedding dresses, choose stylish hairstyles for them and apply light makeup. Create, fantasize and create a fairy tale!</p>
+          <div class="tag-container">
+            <span class="tag">Dress-up</span>
+          </div>
+          <a href="furry-wedding-proposal.html" class="play-btn">Play Now &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card: Sailor Chic vs Pirate Charm -->
+      <article class="card">
+        <div class="thumbnail-wrapper">
+          <img src="images/571.webp" alt="Sailor Chic vs Pirate Charm Cover" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Sailor Chic vs Pirate Charm</h2>
+          <p class="card-description">Welcome to the trendy sea adventure! Two charming heroines are waiting for you in game: the humble little mermaid Amelie and the brave pirate princess Jacqueline. Amelie is the epitome of maritime glamour. Her style is white dresses, gold jewelry and wind in her hair. Jacqueline is the real pirate queen. She wears leather jackets, spectacular corsets and accessories with pirate symbols. Who will win in this fashionable battle - a sophisticated beauty or a daring sea robber? The choice is yours!</p>
+          <div class="tag-container">
+            <span class="tag">Dress-up</span>
+          </div>
+          <a href="sailor-chic-vs-pirate-charm.html" class="play-btn">Play Now &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card: Lady Pool -->
+      <article class="card">
+        <div class="thumbnail-wrapper">
+          <img src="images/597.webp" alt="Lady Pool Cover" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Lady Pool</h2>
+          <p class="card-description">We are glad to welcome you to the bright world of a humorous dress-up game where fashion collides with the comic book universe! Get ready for a creative reinterpretation of your favorite comic book anti-hero costumes: bold color combinations, unexpected prints and fun accessories are available to you. There is everything here: from funny hats that emphasize individuality to stylish superhero jumpsuits. Unleash your imagination!</p>
+          <div class="tag-container">
+            <span class="tag">Dress-up</span>
+          </div>
+          <a href="lady-pool.html" class="play-btn">Play Now &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card: Dress Princess -->
+      <article class="card">
+        <div class="thumbnail-wrapper">
+          <img src="images/624.webp" alt="Dress Princess Cover" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Dress Princess</h2>
+          <p class="card-description">You will transform into a fashion stylist, creating a unique look for the beautiful princess! The game offers a vast array of gorgeous clothing styles, from sparkling evening gowns to fresh and sweet daily dresses, everything is available. Every piece of clothing is carefully designed, with exquisite details displayed in every detail. ​</p>
+          <div class="tag-container">
+            <span class="tag">Dress-up</span>
+          </div>
+          <a href="dress-princess.html" class="play-btn">Play Now &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card: Celebrity Thanksgiving Prep -->
+      <article class="card">
+        <div class="thumbnail-wrapper">
+          <img src="images/639.webp" alt="Celebrity Thanksgiving Prep Cover" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Celebrity Thanksgiving Prep</h2>
+          <p class="card-description">It’s Thanksgiving, and the celebrities are getting ready for the big day! In Celebrity Thanksgiving Prep, you’ll help your favorite stars get glammed up for the holiday dinner. Start by creating stunning makeup looks, styling hair, and choosing the perfect fall outfit. Then, join them in the kitchen for some festive cooking fun! From cozy sweaters to chic party dresses, show off your fashion taste and creativity in this delightful seasonal makeover game.</p>
+          <div class="tag-container">
+            <span class="tag">Dress-up</span>
+          </div>
+          <a href="celebrity-thanksgiving-prep.html" class="play-btn">Play Now &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card: Trading Games Playtime -->
+      <article class="card">
+        <div class="thumbnail-wrapper">
+          <img src="images/645.webp" alt="Trading Games Playtime Cover" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Trading Games Playtime</h2>
+          <p class="card-description">Hey there, game lovers! Get ready to embark on an exciting journey with Trading Games Playtime, the ultimate casual game that's all about relaxation and non-stop fun! This game is a magical blend of various mini-games, making it a one-stop destination for your entertainment needs. First off, it doubles as a fantastic antistress simulator.</p>
+          <div class="tag-container">
+            <span class="tag">Casual</span>
+<span class="tag">Dress-up</span>
+          </div>
+          <a href="trading-games-playtime.html" class="play-btn">Play Now &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card: Romantic K-Pop Transformation -->
+      <article class="card">
+        <div class="thumbnail-wrapper">
+          <img src="images/678.webp" alt="Romantic K-Pop Transformation Cover" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Romantic K-Pop Transformation</h2>
+          <p class="card-description">In this game, the stars of K-pop are preparing for a romantic transformation. Create a unique images for girls, full of tenderness and brilliance of the stage. Experiment with makeup; change the hairstyles and hair color of the girls. Choose the perfect outfit: from cute dresses and stylish tops to trendy skirts and trousers. Complete the look with fashion accessories. Compare the resulting images and decide which of the heroines of the game has become the real queen of romantic K-pop style.</p>
+          <div class="tag-container">
+            <span class="tag">Dress-up</span>
+          </div>
+          <a href="romantic-k-pop-transformation.html" class="play-btn">Play Now &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card: Sid & Ginny Y2K Glam Clash -->
+      <article class="card">
+        <div class="thumbnail-wrapper">
+          <img src="images/730.webp" alt="Sid & Ginny Y2K Glam Clash Cover" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Sid & Ginny Y2K Glam Clash</h2>
+          <p class="card-description">Welcome to the Y2K style fashion world! Two charismatic heroines are waiting for you, ready to try on fashion trends from the 2000s. Create spectacular makeup for them with lip gloss, shining shadows and glossy skin; choose stylish hairstyles - from smooth straight hair to playful ponytails and fashionable hairpins. Experiment with low-cut jeans, crop tops, mini skirts, shiny fabrics, and bold combinations. Complete the resulting image with iconic accessories of those years.</p>
+          <div class="tag-container">
+            <span class="tag">Dress-up</span>
+          </div>
+          <a href="sid-ginny-y2k-glam-clash.html" class="play-btn">Play Now &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card: Celebrity E-Girl Vibes -->
+      <article class="card">
+        <div class="thumbnail-wrapper">
+          <img src="images/735.webp" alt="Celebrity E-Girl Vibes Cover" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Celebrity E-Girl Vibes</h2>
+          <p class="card-description">Step into the world of edgy street style with Celebrity E-Girl Vibes!  This game lets you dress up celebrities in the bold, trendy looks that define E-Girl fashion. Experiment with colorful hairstyles, graphic eyeliner, oversized hoodies, crop tops, ripped jeans, plaid skirts, chokers, and statement accessories. Pair each look with vibrant makeup and nail polish to complete the vibe.</p>
+          <div class="tag-container">
+            <span class="tag">Dress-up</span>
+          </div>
+          <a href="celebrity-e-girl-vibes.html" class="play-btn">Play Now &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card: Barbee Met Gala Transformation -->
+      <article class="card">
+        <div class="thumbnail-wrapper">
+          <img src="images/738.webp" alt="Barbee Met Gala Transformation Cover" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Barbee Met Gala Transformation</h2>
+          <p class="card-description">Barbee and her friends have a big night ahead—the Met Gala! It’s your job to help each of them get dressed up and feel amazing. Whether someone’s into bold colors or classic glam, you get to style their look from head to toe and make sure they’re ready to walk the red carpet.</p>
+          <div class="tag-container">
+            <span class="tag">Dress-up</span>
+          </div>
+          <a href="barbee-met-gala-transformation.html" class="play-btn">Play Now &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card: My Dreamy Flora Fashion Look -->
+      <article class="card">
+        <div class="thumbnail-wrapper">
+          <img src="images/769.webp" alt="My Dreamy Flora Fashion Look Cover" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">My Dreamy Flora Fashion Look</h2>
+          <p class="card-description">Welcome to My Dreamy Flora Fashion Look. Girls! You know that spring is on its way when you see the trees starting to bud and bloom, and the bulbs you planted last fall start to sprout out of the ground. Join with Ellie and their friends to celebrate the most beautiful and colorful season.</p>
+          <div class="tag-container">
+            <span class="tag">Dress-up</span>
+          </div>
+          <a href="my-dreamy-flora-fashion-look.html" class="play-btn">Play Now &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card: Venetian Love Affair -->
+      <article class="card">
+        <div class="thumbnail-wrapper">
+          <img src="images/770.webp" alt="Venetian Love Affair Cover" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Venetian Love Affair</h2>
+          <p class="card-description">Go to the festive Venice and become a fashion stylist for two girlfriends, each of whom dreams of an unforgettable fancy dress. Create unique masks with great designs and choose luxurious Baroque dresses, jewelry and accessories. Immerse yourself in the atmosphere of mystery and romance of the Venetian carnival. Unleash your talent as a fashion designer in a unique way for the masquerade participants. Get ready for a magical journey into the world of love and mysteries!</p>
+          <div class="tag-container">
+            <span class="tag">Dress-up</span>
+          </div>
+          <a href="venetian-love-affair.html" class="play-btn">Play Now &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card: How To Dress Your Dragon -->
+      <article class="card">
+        <div class="thumbnail-wrapper">
+          <img src="images/803.webp" alt="How To Dress Your Dragon Cover" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">How To Dress Your Dragon</h2>
+          <p class="card-description">Create your collection dream dragon!
+
+In "How to Dress Your Dragon", you can design and customize your very own adorable dragon. Choose from a wide variety of fun options, including wings, outfits, accessories, and even quirky headpieces like ice cream hats! Add stickers, pick vibrant colors, and create a dragon that’s as unique as you are.
+
+Then take snapshots of your masterpiece and save or share it with your friends!
+
+A magical and relaxing experience for dragon enthusiasts of all ages!</p>
+          <div class="tag-container">
+            <span class="tag">Dress-up</span>
+          </div>
+          <a href="how-to-dress-your-dragon.html" class="play-btn">Play Now &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card: Iconic Halloween Costumes -->
+      <article class="card">
+        <div class="thumbnail-wrapper">
+          <img src="images/804.webp" alt="Iconic Halloween Costumes Cover" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Iconic Halloween Costumes</h2>
+          <p class="card-description">Get ready for a spooky and stylish adventure in Iconic Halloween Costumes! Help three BFFs pick out their perfect Halloween looks, from royal Glinda and Bridgerton-inspired outfits to edgy Beetlejuice vibes and cowgirl-chic styles. Customize their costumes with tops, bottoms, accessories, and makeup to create iconic Halloween outfits. Play now and let the fashion fun begin!</p>
+          <div class="tag-container">
+            <span class="tag">Dress-up</span>
+          </div>
+          <a href="iconic-halloween-costumes.html" class="play-btn">Play Now &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card: BFF Lovely Kawaii Outfits -->
+      <article class="card">
+        <div class="thumbnail-wrapper">
+          <img src="images/809.webp" alt="BFF Lovely Kawaii Outfits Cover" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">BFF Lovely Kawaii Outfits</h2>
+          <p class="card-description">Welcome to BFF Lovely Kawaii Outfits game. Princesses Elsa, Anna, Moana, and Jasmine are more fascinated about Kawaii Outfits. They are very eager to browse the new collection of Kawaii outfits. Start helping with each princess for their outfits and matching costumes by browsing their wardrobe. Play these cute girl games and have fun!</p>
+          <div class="tag-container">
+            <span class="tag">Dress-up</span>
+          </div>
+          <a href="bff-lovely-kawaii-outfits.html" class="play-btn">Play Now &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card: K-Wedding Dream -->
+      <article class="card">
+        <div class="thumbnail-wrapper">
+          <img src="images/819.webp" alt="K-Wedding Dream Cover" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">K-Wedding Dream</h2>
+          <p class="card-description">Immerse yourself in the atmosphere of Korean love with the heroes of this dressup-game. Become a part of a magical story where bright K-Pop stars are preparing for the most important day of their lives - Wedding day! Combine tradition and modern fashion by creating wedding looks for lovers. Choose the perfect makeup, hairstyle and jewelry to highlight their unique style and charm. Let each of your choices reflect the emotions and dreams of the characters, turning this day into a real fairy tale!</p>
+          <div class="tag-container">
+            <span class="tag">Dress-up</span>
+          </div>
+          <a href="k-wedding-dream.html" class="play-btn">Play Now &rarr;</a>
+        </div>
+      </article>
+    </div>
+    <div class="pagination"><a href="category-dress-up.html" class="page-link page-arrow">&laquo; Prev</a><a href="category-dress-up.html" class="page-link">1</a><span class="page-link active">2</span><a href="category-dress-up-3.html" class="page-link">3</a><a href="category-dress-up-4.html" class="page-link">4</a><a href="category-dress-up-3.html" class="page-link page-arrow">Next &raquo;</a></div>
+  </div>
+
+  <footer>
+      <nav class="categories-nav">
+    <div class="categories-container">
+      <a href="index.html" class="category-link ">All Games</a>
+      <a href="category-io.html" class="category-link ">.IO</a>
+      <a href="category-2d1-060.html" class="category-link ">2D1,060</a>
+      <a href="category-3-player26.html" class="category-link ">3 Player26</a>
+      <a href="category-3d1-383.html" class="category-link ">3D1,383</a>
+      <a href="category-5-minute-fun24.html" class="category-link ">5-minute fun24</a>
+      <a href="category-adventure.html" class="category-link ">Adventure</a>
+      <a href="category-agility.html" class="category-link ">Agility</a>
+      <a href="category-animal215.html" class="category-link ">Animal215</a>
+      <a href="category-arena254.html" class="category-link ">Arena254</a>
+      <a href="category-army.html" class="category-link ">Army</a>
+      <a href="category-army40.html" class="category-link ">Army40</a>
+      <a href="category-art.html" class="category-link ">Art</a>
+      <a href="category-avoid.html" class="category-link ">Avoid</a>
+      <a href="category-avoid297.html" class="category-link ">Avoid297</a>
+      <a href="category-basketball.html" class="category-link ">Basketball</a>
+      <a href="category-battle.html" class="category-link ">Battle</a>
+      <a href="category-battle523.html" class="category-link ">Battle523</a>
+      <a href="category-battleship.html" class="category-link ">battleship</a>
+      <a href="category-battleship19.html" class="category-link ">Battleship19</a>
+      <a href="category-be-the-best24.html" class="category-link ">Be the best24</a>
+      <a href="category-bike.html" class="category-link ">Bike</a>
+      <a href="category-bike-games.html" class="category-link ">bike games</a>
+      <a href="category-bike63.html" class="category-link ">Bike63</a>
+      <a href="category-block94.html" class="category-link ">Block94</a>
+      <a href="category-boardgames.html" class="category-link ">Boardgames</a>
+      <a href="category-brain260.html" class="category-link ">Brain260</a>
+      <a href="category-bubble-shooter.html" class="category-link ">Bubble Shooter</a>
+      <a href="category-building182.html" class="category-link ">Building182</a>
+      <a href="category-business135.html" class="category-link ">Business135</a>
+      <a href="category-can-t-stop-playing212.html" class="category-link ">Can’t Stop Playing212</a>
+      <a href="category-cannon22.html" class="category-link ">Cannon22</a>
+      <a href="category-car.html" class="category-link ">Car</a>
+      <a href="category-car-games.html" class="category-link ">car games</a>
+      <a href="category-car373.html" class="category-link ">Car373</a>
+      <a href="category-cards.html" class="category-link ">Cards</a>
+      <a href="category-care.html" class="category-link ">Care</a>
+      <a href="category-cartoon75.html" class="category-link ">Cartoon75</a>
+      <a href="category-casual.html" class="category-link ">Casual</a>
+      <a href="category-casual969.html" class="category-link ">Casual969</a>
+      <a href="category-classic.html" class="category-link ">Classic</a>
+      <a href="category-classic98.html" class="category-link ">Classic98</a>
+      <a href="category-collect.html" class="category-link ">Collect</a>
+      <a href="category-collect566.html" class="category-link ">Collect566</a>
+      <a href="category-color.html" class="category-link ">Color</a>
+      <a href="category-color195.html" class="category-link ">Color195</a>
+      <a href="category-connect.html" class="category-link ">Connect</a>
+      <a href="category-connect68.html" class="category-link ">Connect68</a>
+      <a href="category-controller.html" class="category-link ">Controller</a>
+      <a href="category-controller59.html" class="category-link ">Controller59</a>
+      <a href="category-cooking.html" class="category-link ">Cooking</a>
+      <a href="category-deep-immersive24.html" class="category-link ">Deep & immersive24</a>
+      <a href="category-destroy254.html" class="category-link ">Destroy254</a>
+      <a href="category-detective24.html" class="category-link ">Detective24</a>
+      <a href="category-difficult81.html" class="category-link ">Difficult81</a>
+      <a href="category-dress-up.html" class="category-link active">Dress-up</a>
+      <a href="category-drifting113.html" class="category-link ">Drifting113</a>
+      <a href="category-educational.html" class="category-link ">Educational</a>
+      <a href="category-escape.html" class="category-link ">Escape</a>
+      <a href="category-farming.html" class="category-link ">Farming</a>
+      <a href="category-farming87.html" class="category-link ">Farming87</a>
+      <a href="category-flash.html" class="category-link ">Flash</a>
+      <a href="category-flash153.html" class="category-link ">Flash153</a>
+      <a href="category-football.html" class="category-link ">Football</a>
+      <a href="category-fps.html" class="category-link ">FPS</a>
+      <a href="category-fps-game.html" class="category-link ">FPS game</a>
+      <a href="category-fps175.html" class="category-link ">FPS175</a>
+      <a href="category-gun241.html" class="category-link ">Gun241</a>
+      <a href="category-hero71.html" class="category-link ">Hero71</a>
+      <a href="category-hidden-object.html" class="category-link ">Hidden Object</a>
+      <a href="category-hidden-object28.html" class="category-link ">Hidden Object28</a>
+      <a href="category-horror.html" class="category-link ">Horror</a>
+      <a href="category-incremental386.html" class="category-link ">Incremental386</a>
+      <a href="category-jigsaw.html" class="category-link ">Jigsaw</a>
+      <a href="category-jumping150.html" class="category-link ">Jumping150</a>
+      <a href="category-logic.html" class="category-link ">Logic</a>
+      <a href="category-logic536.html" class="category-link ">Logic536</a>
+      <a href="category-lol41.html" class="category-link ">Lol41</a>
+      <a href="category-mahjong.html" class="category-link ">Mahjong</a>
+      <a href="category-mahjong-connect.html" class="category-link ">Mahjong & Connect</a>
+      <a href="category-mahjong-games.html" class="category-link ">Mahjong games</a>
+      <a href="category-mahjong-puzzle-board.html" class="category-link ">mahjong puzzle board</a>
+      <a href="category-mahjong37.html" class="category-link ">Mahjong37</a>
+      <a href="category-management.html" class="category-link ">Management</a>
+      <a href="category-management-game.html" class="category-link ">management game</a>
+      <a href="category-management209.html" class="category-link ">Management209</a>
+      <a href="category-match-3117.html" class="category-link ">Match 3117</a>
+      <a href="category-match-3.html" class="category-link ">Match-3</a>
+      <a href="category-medieval15.html" class="category-link ">Medieval15</a>
+      <a href="category-meme-bloxy24.html" class="category-link ">Meme & bloxy24</a>
+      <a href="category-meme58.html" class="category-link ">Meme58</a>
+      <a href="category-merge.html" class="category-link ">Merge</a>
+      <a href="category-merge-games.html" class="category-link ">Merge games</a>
+      <a href="category-merge-titles.html" class="category-link ">merge titles</a>
+      <a href="category-merge221.html" class="category-link ">Merge221</a>
+      <a href="category-minecraft.html" class="category-link ">Minecraft</a>
+      <a href="category-minecraft81.html" class="category-link ">Minecraft81</a>
+      <a href="category-mission.html" class="category-link ">Mission</a>
+      <a href="category-mission206.html" class="category-link ">Mission206</a>
+      <a href="category-mmo.html" class="category-link ">MMO</a>
+      <a href="category-mmo24.html" class="category-link ">MMO24</a>
+      <a href="category-mobile2-095.html" class="category-link ">Mobile2,095</a>
+      <a href="category-mouse1-697.html" class="category-link ">Mouse1,697</a>
+      <a href="category-multiplayer-games.html" class="category-link ">multiplayer games</a>
+      <a href="category-mystery45.html" class="category-link ">Mystery45</a>
+      <a href="category-obby.html" class="category-link ">Obby</a>
+      <a href="category-obby57.html" class="category-link ">Obby57</a>
+      <a href="category-obstacle297.html" class="category-link ">Obstacle297</a>
+      <a href="category-obstacle298.html" class="category-link ">Obstacle298</a>
+      <a href="category-one-button84.html" class="category-link ">One Button84</a>
+      <a href="category-parking35.html" class="category-link ">Parking35</a>
+      <a href="category-parkour55.html" class="category-link ">Parkour55</a>
+      <a href="category-party23.html" class="category-link ">Party23</a>
+      <a href="category-physics367.html" class="category-link ">Physics367</a>
+      <a href="category-pixel313.html" class="category-link ">Pixel313</a>
+      <a href="category-platform258.html" class="category-link ">Platform258</a>
+      <a href="category-point-and-click123.html" class="category-link ">Point and Click123</a>
+      <a href="category-police57.html" class="category-link ">Police57</a>
+      <a href="category-pool.html" class="category-link ">Pool</a>
+      <a href="category-premium-perks71.html" class="category-link ">Premium Perks71</a>
+      <a href="category-puzzle.html" class="category-link ">Puzzle</a>
+      <a href="category-quiz.html" class="category-link ">Quiz</a>
+      <a href="category-racing.html" class="category-link ">Racing</a>
+      <a href="category-racing-driving.html" class="category-link ">Racing & Driving</a>
+      <a href="category-racing-games.html" class="category-link ">racing games</a>
+      <a href="category-racing126.html" class="category-link ">Racing126</a>
+      <a href="category-relaxing221.html" class="category-link ">Relaxing221</a>
+      <a href="category-rpg80.html" class="category-link ">RPG80</a>
+      <a href="category-sandbox41.html" class="category-link ">Sandbox41</a>
+      <a href="category-shooter.html" class="category-link ">Shooter</a>
+      <a href="category-shop49.html" class="category-link ">Shop49</a>
+      <a href="category-side-scrolling184.html" class="category-link ">Side Scrolling184</a>
+      <a href="category-simulation.html" class="category-link ">Simulation</a>
+      <a href="category-skill254.html" class="category-link ">Skill254</a>
+      <a href="category-sniper39.html" class="category-link ">Sniper39</a>
+      <a href="category-soccer.html" class="category-link ">Soccer</a>
+      <a href="category-solitaire27.html" class="category-link ">Solitaire27</a>
+      <a href="category-space57.html" class="category-link ">Space57</a>
+      <a href="category-speed155.html" class="category-link ">Speed155</a>
+      <a href="category-sports.html" class="category-link ">Sports</a>
+      <a href="category-stickman.html" class="category-link ">Stickman</a>
+      <a href="category-story45.html" class="category-link ">Story45</a>
+      <a href="category-strategy.html" class="category-link ">Strategy</a>
+      <a href="category-stunt126.html" class="category-link ">Stunt126</a>
+      <a href="category-survival365.html" class="category-link ">Survival365</a>
+      <a href="category-sword35.html" class="category-link ">Sword35</a>
+      <a href="category-thinky.html" class="category-link ">Thinky</a>
+      <a href="category-third-person-shooter80.html" class="category-link ">Third Person Shooter80</a>
+      <a href="category-timeless-classics24.html" class="category-link ">Timeless classics24</a>
+      <a href="category-tower-defense.html" class="category-link ">Tower Defense</a>
+      <a href="category-tower-defense118.html" class="category-link ">Tower Defense118</a>
+      <a href="category-train-your-brain24.html" class="category-link ">Train your brain24</a>
+      <a href="category-turn-based30.html" class="category-link ">Turn Based30</a>
+      <a href="category-war.html" class="category-link ">War</a>
+      <a href="category-war137.html" class="category-link ">War137</a>
+    </div>
+  </nav>
+    <p style="margin-top: 15px;">&copy; 2026 Dress-up Games. Deployed on PixelJoySpark.github.io.</p>
+    <div class="footer-links" style="margin-top: 15px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; align-items: center;">
+  <a href="contact.html" style="color: var(--text-gray); text-decoration: none; font-size: 0.9rem;">Contact Us</a>
+  <span style="color: rgba(255, 255, 255, 0.15);">|</span>
+  <a href="privacy.html" style="color: var(--text-gray); text-decoration: none; font-size: 0.9rem;">Privacy Policy</a>
+  <span style="color: rgba(255, 255, 255, 0.15);">|</span>
+  <a href="terms.html" style="color: var(--text-gray); text-decoration: none; font-size: 0.9rem;">Terms of Service</a>
+</div>
+
+  </footer>
+
+  <script src="ads-manager.js" defer></script>
+  <script src="search.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const topNavToggle = document.getElementById('topNavToggle');
+      const topNavMenu = document.getElementById('topNavMenu');
+      if (topNavToggle && topNavMenu) {
+        topNavToggle.addEventListener('click', () => {
+          topNavMenu.classList.toggle('open');
+          topNavToggle.classList.toggle('active');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
